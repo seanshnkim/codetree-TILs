@@ -9,13 +9,11 @@ X = int(input())
 m = int(math.sqrt(X))
 
 if m*m == X:
-    max_speed = m
-    ans = 2*max_speed - 1
+    ans = 2*m - 1
 else:
     if m*m + m >= X:
-        max_speed = m
-        ans = 2*max_speed
+        ans = 2*m
     else:
-        ans = 2*max_speed + 1
+        ans = 2*m + 1
 
 print(ans)
