@@ -10,7 +10,7 @@ ans = 0
 
 if d_left == 1 and d_right == 1:
     ans = 0
-elif (d_left == 1 and d_right == 2) or (d_left == 2 and d_right == 1):
+elif d_left == 2 or d_right == 2:
     ans = 1
 else:
     ans = 2
