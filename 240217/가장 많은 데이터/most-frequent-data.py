@@ -8,4 +8,4 @@ for _ in range(N):
     s = input()
     _dict[s] += 1
 
-print(max(dict.values()))
+print(max(_dict.values()))
