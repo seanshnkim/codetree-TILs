@@ -10,9 +10,11 @@ for n in nums:
 
 ans = 0
 for n in nums:
-    ans += _dict[K-n]
+    if n == K -n:
+        ans += _dict[n] * (_dict[n]- 1)
+    else:
+        ans += _dict[n] * _dict[K-n]
+        _dict[n] -= 1
 
-# 4 입장에서 5를 골랐을 때 1번, 5 입장에서 4를 골랐을 때 1번
-# -> 2번으로 count되지만 사실 두 개 수의 골라 합이 k가 되는 경우는 1가지이므로
-# 항상 2로 나눠주어야 한다.
-print(ans // 2)
+# print(_dict)
+print(ans)
