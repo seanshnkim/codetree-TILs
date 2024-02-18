@@ -10,7 +10,7 @@ for n in nums:
 
 ans = 0
 for n in nums:
-    if _dict[n] == 0:
+    if _dict[n] == 0 or _dict[K-n] == 0:
         continue
     if n == K -n:
         ans += _dict[n] * (_dict[n]- 1) // 2
