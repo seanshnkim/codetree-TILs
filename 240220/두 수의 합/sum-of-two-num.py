@@ -17,6 +17,7 @@ for n in nums:
         count[n] = 0
     else:
         ans += count[n] * count[K-n]
-        count[n] -= count[K-n]
+        count[n] = 0
+        count[K-n] = 0
 
 print(ans)
