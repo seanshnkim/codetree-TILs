@@ -31,9 +31,12 @@ while invited_people:
         # 만약 초대받은 사람을 제외한 사람이 그룹에 1명밖에 없다면, 그 사람을 다음 초대받은 사람으로 설정
         if len(group_set) == 1:
             # invited_people.appendleft(group_set.pop())
-            invited_people.add(group_set.pop())
-            # print(invited_people)
-            ans += 1
+            # invited_people.add(group_set.pop())
+            # ans += 1
+            new_inv = group_set.pop()
+            if new_inv not in invited_people:
+                invited_people.add(new_inv)
+                ans += 1
         
         # 만약 그룹에 이제 남은 사람이 없다면, 그룹을 삭제
         # if not group_set:
