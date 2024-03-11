@@ -42,6 +42,9 @@ def max_tilted(r, c, right):
     cur_sum = 0
     max_left = min(r-1, c)
     for left in range(1, max_left+1):
+        # 높이도 신경 써야지... 1시간 디버깅 -> 틀린 이유
+        if r-left-right < 0:
+            continue
         cur_sum = max(cur_sum, sum_tilted(r, c, right, left))
     
     return cur_sum
