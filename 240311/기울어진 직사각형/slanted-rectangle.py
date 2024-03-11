@@ -30,7 +30,7 @@ def sum_tilted(r, c, right, left):
     r += right
     c -= right
     # 4번 방향의 이동
-    for i in range(left-1):
+    for i in range(left):
         dx, dy = i, i
         cur_sum += grid[r+dx][c+dy]
     
