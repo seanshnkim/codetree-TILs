@@ -8,7 +8,7 @@ def intersect(seg1, seg2):
     a1, a2 = seg1
     b1, b2 = seg2
 
-    if a2 < b1 or b2 < a1:
+    if a2 <= b1 or b2 <= a1:
         return False
     else:
         return True
